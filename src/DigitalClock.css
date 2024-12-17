@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.digital-clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center vertically */
+    background-color: #282c34;
+    font-family: "Courier New", monospace;
+  }
+  
+  .digital-clock {
+    color: #61dafb;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #61dafb, 0 0 20px #61dafb, 0 0 30px #61dafb;
+  
+    /* Smooth transition for changing time */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    animation: blink 1s infinite alternate;
+  }
+  
+  /* Blinking Effect */
+  @keyframes blink {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0.7;
+      transform: scale(1.05);
+    }
+  }
+  
